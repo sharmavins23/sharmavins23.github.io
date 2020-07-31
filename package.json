@@ -1,0 +1,35 @@
+{
+    "name": "sharmavins23.github.io",
+    "version": "1.0.0",
+    "description": "https://stackoverflow.com/questions/37684532/trying-to-push-webpack-to-gh-pages",
+    "main": "index.js",
+    "scripts": {
+        "test": "webpack-dev-server --env development",
+        "bundle": "webpack --env production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sharmavins23/sharmavins23.github.io.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sharmavins23/sharmavins23.github.io/issues"
+    },
+    "homepage": "https://github.com/sharmavins23/sharmavins23.github.io#readme",
+    "devDependencies": {
+        "@babel/core": "^7.11.0",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/preset-react": "^7.10.4",
+        "babel-loader": "^8.1.0",
+        "css-loader": "^4.1.1",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "dependencies": {
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "style-loader": "^1.2.1"
+    }
+}
