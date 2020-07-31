@@ -10,7 +10,7 @@ module.exports = (env) => {
             rules: [
                 {
                     test: /\.js$/,
-                    exclude: /node_modules/,
+                    exclude: [/node_modules/, /bundle\.js/],
                     use: [
                         {
                             loader: "babel-loader",
