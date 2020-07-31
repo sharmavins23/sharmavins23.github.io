@@ -1,0 +1,28 @@
+/* ===== Stylesheet Formatting Guide ======================================== */
+
+/*
+- Position
+- Display and Box Model
+- Color
+- Text
+- Other */
+
+/* ===== Website Stylesheets ================================================ */
+
+.main {
+    /* Display and Box Model */
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: blue;
+}
+
+/* ===== Resume Header ====================================================== */
+
+/* ===== Skills and Education =============================================== */
+
+/* ===== Work Experience ==================================================== */
+
+/* ===== Projects =========================================================== */
+
+/* ===== Bottom Portion ===================================================== */
