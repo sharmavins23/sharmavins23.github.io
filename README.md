@@ -17,6 +17,9 @@ banners.
 
 # License TL;DR
 
+Any assets licensed from other sources are credited in their individual code
+files.
+
 This project is distributed under the MIT license. This is a paraphrasing of a
 [short summary](https://tldrlegal.com/license/mit-license).
 
