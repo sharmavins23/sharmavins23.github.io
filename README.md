@@ -1,1 +1,51 @@
-https://stackoverflow.com/questions/37684532/trying-to-push-webpack-to-gh-pages
+# Vin's Personal Site
+
+This site is a statically hosted Github pages site to show off my personal
+projects and portfolio. It was created mainly in
+[React.js](https://reactjs.org/), alongside HTML5 and CSS.
+
+## Overview
+
+The project features bundled JavaScript using [Babel](https://babeljs.io/), as
+well as [Webpack's](https://webpack.js.org/) NodeJS module bundling and CSS
+style loading.
+
+The site uses [React.js](https://reactjs.org/) as its main framework, and uses
+components from [Ant Design's](https://ant.design/) library of components and
+animations. Some custom made CSS styles are also used for tables and top
+banners.
+
+# License TL;DR
+
+This project is distributed under the MIT license. This is a paraphrasing of a
+[short summary](https://tldrlegal.com/license/mit-license).
+
+This license is a short, permissive software license. Basically, you can do
+whatever you want with this software, as long as you include the original
+copyright and license notice in any copy of this software/source.
+
+## What you CAN do:
+
+-   You may commercially use this project in any way, and profit off it or the
+    code included in any way;
+-   You may modify or make changes to this project in any way;
+-   You may distribute this project, the compiled code, or its source in any
+    way;
+-   You may incorporate this work into something that has a more restrictive
+    license in any way;
+-   And you may use the work for private use.
+
+## What you CANNOT do:
+
+-   You may not hold me (the author) liable for anything that happens to this
+    code as well as anything that this code accomplishes. The work is provided
+    as-is.
+
+## What you MUST do:
+
+-   You must include the copyright notice in all copies or substantial uses of
+    the work;
+-   You must include the license notice in all copies or substantial uses of the
+    work.
+
+If you're feeling generous, give credit to me somewhere in your projects.
