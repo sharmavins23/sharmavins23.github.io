@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "webpack-dev-server --env development",
-        "bundle": "webpack --env production"
+        "deploy": "webpack --env production"
     },
     "repository": {
         "type": "git",
