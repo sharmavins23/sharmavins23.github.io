@@ -22,6 +22,18 @@
     text-align: center;
 }
 
+.header_table {
+    /* Position */
+    width: 100%;
+    /* Other */
+    table-layout: fixed;
+}
+
+.header_table_cell_right {
+    /* Text */
+    text-align: right;
+}
+
 /* ===== Skills and Education =============================================== */
 
 /* ===== Work Experience ==================================================== */
