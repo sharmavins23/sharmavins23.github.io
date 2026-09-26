@@ -1,0 +1,20 @@
+updates:
+    # Update NPM on a monthly basis.
+    - package-ecosystem: npm
+      directory: /
+      # Bundle all development dependencies into one large PR.
+      groups:
+          all-dev-deps:
+              dependency-type: development
+      # Limit the number of open pull requests to avoid spam.
+      open-pull-requests-limit: 3
+      schedule:
+          interval: monthly
+
+    # Update GitHub actions on a monthly basis.
+    - package-ecosystem: github-actions
+      directory: /
+      schedule:
+          interval: monthly
+
+version: 2

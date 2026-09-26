@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+# Limit deployments to one at a time.
+concurrency:
+    # Stop any in-progress deployments from being cancelled.
+    cancel-in-progress: false
+    # Group all concurrent jobs under the `pages` group.
+    group: pages
+
+# Configure jobs for the deployment.
+jobs:
+    # Build the project.
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
+              with:
+                  node-version: 25
+                  cache: npm
+            - run: npm ci
+            - run: npm run lint
+            - run: npm run build
+            - uses: actions/upload-pages-artifact@v5
+              with:
+                  path: build
+
+    # Deploy the project to GitHub pages.
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - id: deployment
+              uses: actions/deploy-pages@v5
+
+# Trigger deployments automatically.
+on:
+    # Trigger deployments on `git push` to the `master` branch.
+    push:
+        branches: [master]
+    # Trigger deployments via manual button press.
+    workflow_dispatch:
+
+# Configure permissions for the action.
+permissions:
+    contents: read
+    id-token: write
+    pages: write
