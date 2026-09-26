@@ -11,15 +11,21 @@ concurrency:
 jobs:
     # Build the project.
     build:
+        # Skip if CI failed. Always run on manual dispatch.
+        if:
+            github.event_name == 'workflow_dispatch' ||
+            github.event.workflow_run.conclusion == 'success'
         runs-on: ubuntu-latest
         steps:
+            # Check out the exact commit CI validated.
             - uses: actions/checkout@v7
+              with:
+                  ref: ${{ github.event.workflow_run.head_sha || github.sha }}
             - uses: actions/setup-node@v7
               with:
                   node-version: 25
                   cache: npm
             - run: npm ci
-            - run: npm run lint
             - run: npm run build
             - uses: actions/upload-pages-artifact@v5
               with:
@@ -38,11 +44,13 @@ jobs:
 
 # Trigger deployments automatically.
 on:
-    # Trigger deployments on `git push` to the `master` branch.
-    push:
-        branches: [master]
     # Trigger deployments via manual button press.
     workflow_dispatch:
+    # Trigger deployments when the CI workflow completes.
+    workflow_run:
+        workflows: [CI]
+        types: [completed]
+        branches: [master]
 
 # Configure permissions for the action.
 permissions:
