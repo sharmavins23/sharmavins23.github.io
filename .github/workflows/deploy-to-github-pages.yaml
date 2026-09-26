@@ -48,7 +48,7 @@ on:
     workflow_dispatch:
     # Trigger deployments when the CI workflow completes.
     workflow_run:
-        workflows: [CI]
+        workflows: [Continuous Integration Testing]
         types: [completed]
         branches: [master]
 
