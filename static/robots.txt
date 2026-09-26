@@ -1,0 +1,3 @@
+# Deny all clankers!
+User-agent: *
+Disallow: /
